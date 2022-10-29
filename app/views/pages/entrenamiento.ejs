@@ -11,14 +11,18 @@
 <body>
     <%- include ('../partials/navbar') %>
 
-    <h1>
-        <%= tipo %>
-      
-    </h1>
+    <% if(rutinas.length>0){%>
+        <% for(var i = 0; i< rutinas.length; i++){%>
+            <h1>
+                <%= rutinas[i].descripcion %>
+            </h1>
+        <%} %>
+    <%} else {%>
+        <h1>no tenemos rutinas para esta configuracion lo siento</h1>
+    <%} %>
+    
 
-    <h2>
-        <%= inten %>
-    </h2>
+
     <%- include ('../partials/footer') %>
    
     
